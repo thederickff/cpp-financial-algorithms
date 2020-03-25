@@ -34,16 +34,19 @@ double CorrelationCalculator::correlation()
     std::cout << "error: number of observations is different" << std::endl;
     return -1;
   }
+
   double meanA = m_tsA.averagePrice();
   double meanB = m_tsB.averagePrice();
   double total = 0;
 
   for (int i = 0; i < m_tsA.size(); ++i) {
-    total += (m_tsA.elem(i) - meanA) * (m_tsB.elem(i) * meanB);
+    total += (m_tsA.elem(i) - meanA) * (m_tsB.elem(i) - meanB);
   }
 
   double devA = m_tsA.standardDeviation();
   double devB = m_tsB.standardDeviation();
 
-  return total / sqrt(devA * devB);
+  total /= (devA * devB);
+
+  return total / (m_tsA.size() - 1);
 }
