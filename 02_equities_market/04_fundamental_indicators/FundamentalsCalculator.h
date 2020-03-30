@@ -22,7 +22,7 @@ public:
   void setShareholdersEquity(double val);
 
   double PE();
-  double fowardPE();
+  double forwardPE();
   double bookValue();
   double priceToBookRatio();
   double priceEarningsToGrowth();

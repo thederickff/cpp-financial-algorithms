@@ -97,7 +97,7 @@ double FundamentalsCalculator::PE()
   return (m_price * m_numberOfShares) / m_earnings;
 }
 
-double FundamentalsCalculator::fowardPE()
+double FundamentalsCalculator::forwardPE()
 {
   return (m_price * m_numberOfShares) / m_expectedEarnings;
 }
