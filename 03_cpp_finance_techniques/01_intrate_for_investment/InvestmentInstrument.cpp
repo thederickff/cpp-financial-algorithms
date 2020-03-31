@@ -57,7 +57,7 @@ MortgageInstrument &MortgageInstrument::operator=(const MortgageInstrument &v)
   {
     this->m_monthlyPay = v.m_monthlyPay;
     this->m_propertyValue = v.m_propertyValue;
-    this->m_downPayment = v.m_propertyValue;
+    this->m_downPayment = v.m_downPayment;
   }
 
   return *this;
@@ -67,7 +67,6 @@ MortgageInstrument::~MortgageInstrument()
 {
 
 }
-
 
 double MortgageInstrument::getPrincipal()
 {

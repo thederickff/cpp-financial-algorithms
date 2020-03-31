@@ -12,7 +12,7 @@ public:
 
   double getPrincipal();
   double getMonthlyPayment();
-
+  
 private:
   double m_principal;
   double m_monthlyPayment;
